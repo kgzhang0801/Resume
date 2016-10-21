@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{Current-DS}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Kungang}{Zhang}{{Seeking Data Science Internship}\\
+%{ \urlstyle{same}\url{https://sites.google.com/a/u.northwestern.edu/kungang-zhang/} \\
+\href{mailto:zkg@u.northwestern.edu}{zkg@u.northwestern.edu} | 919.813.8148
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Northwestern University}
+\descript{Ph.D. Candidate in Industrial Engineering \& Management Sciences}
+\location{Expected Sep 2019 | Evanston, IL }
+\sectionsep
+
+\descript{M.S. in Industrial Engineering \& Management Sciences}
+\location{Sep 2016 | Evanston, IL \\ Cum. GPA: 3.81}
+Conc. in Statistics \& Optimization\\
+\sectionsep
+
+\subsection{Duke University}
+\descript{M.S. in Mechanical Engineering}
+\location{Dec 2014 | Durham, NC}
+%Conc. in Software Engineering \\
+%College of Engineering \\
+%Dean's List (All Semesters) \\
+%\location{ Cum. GPA: 3.92 / 4.0 \\
+%Major GPA: 3.94 / 4.0}
+\sectionsep
+
+\subsection{Peking University}
+\descript{B.S. in Applied Mechanics}
+\location{Jul 2012 | Beijing, China}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/karlzhang-hhg}{\custombold{kungangzhang}} \\
+LinkedIn://  \href{www.linkedin.com/in/kungang-zhang}{\custombold{kungangzhang}} \\
+Website:// \href{https://sites.google.com/a/u.northwestern.edu/kungang-zhang/}{\custombold{kungangzhang}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Machine Learning \\
+Convex Optimization \\
+Predictive Analytics \\
+Statistical Pattern Recognition \\
+Bayesian Statistics \\
+Times Series Methoes
+\sectionsep
+
+\subsection{MOOC}
+Full Stack Software Engineering \\
+Full Stack Data Analysis \\
+Data Structures and Algorithms \\
+Introduction to Databases
+\sectionsep
+
+%\subsection{Undergraduate}
+%Information Retrieval \\
+%Operating Systems \\
+%Artificial Intelligence + Practicum \\
+%Functional Programming \\
+%Computer Graphics + Practicum \\
+%{\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst) }}} \\
+%Unix Tools and Scripting \\
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Programming language:}
+R \textbullet{} Python \textbullet{} Java \textbullet{}  C++/C \textbullet{} JavaScript \textbullet{} HTML \textbullet{} Matlab \textbullet{} Mathematica \textbullet{} Gurobi\\
+\location{Full Stack:}
+Node.js \textbullet{} Nginx \textbullet{} AngularJS \textbullet{} Bootstrap \textbullet{} D3.js \textbullet{} LeafletJS \textbullet{} dat.GUI \textbullet{} Docker \\
+\location{Database:}
+MySQL \textbullet{} Postgres SQL\textbullet{} MongoDB \textbullet{} Redis \textbullet{} Cassandra
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Project Experience}
+
+\runsubsection{Data analysis and visualization of house prices}
+\descript{}
+%\location{Expected June 2014 ? Sep 2014 | Mountain View, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed a web-crawler to collect data based on Node.js and express
+\item Built a MongoDB database and a Postgres SQL database connecting the web-crawler  
+\item Cleaned and sorted the raw online data with missing value and multicollinearity by regression, dimension reduction, and sequential model selection using Postgres SQL and R
+\item Predicted housing prices with supervised and unsupervised machine learning methods
+\item Built an interactive webpage to visualize the position of communities based on price range on an interactive map using LeafletJS and dat.GUI
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Visualization and Statistical analysis for vapor condensation}
+\descript{}
+%\location{Expected June 2014 ? Sep 2014 | Mountain View, CA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Simulated a stochastic process of vapor condensation based model of Possion point process (Mat\'{e}rn type repulsive process)
+\item Animated the entire physical process of condensation
+\item Analyzed the distribution of condensation process based on contemporary spatial statistics in R
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Full Stack Software Engineering Project: TinyURL}
+\descript{}
+%\location{May 2013 ? Aug 2013 | Mountain View, CA}
+\begin{tightemize}
+\item Designed a web application to manage requests to short urls based on Node.js and express module
+\item Designed a RESTful API for requests and configured a MongoDB database to store short and long urls
+\item Implemented load balancing on a distributed system using Nginx
+\item Deployed Cassandra databases to public clusters using Docker
+\item Conducted A/B test using Mocha and Apache Bench
+\item Developed a feature of expiration of short urls
+\end{tightemize}
+\sectionsep
+
+%\runsubsection{Predictive Analytics: New York City Parking Tickets}
+%\descript{}
+%%\location{Jan 2013 ? May 2013 | Palo Alto, CA \& Ithaca, NY}
+%\begin{tightemize}
+%\item Used regular expressions to clean 9 million data of parking tickets in New York City from 2013 to 2014
+%\item Built a predictive model to estimate the boundary of precincts in New York City based on features
+%\item Used R to visualize the predicted boundaries of precincts
+%\end{tightemize}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Dimension reduction using inverse KPCA}
+\descript{| Funded Graduate Research}
+%\location{Jun 2016 - Present | Evanston, IL}
+%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan robot trajectories in human environments.  Publication submitted.
+This project is to developed an algorithm, called \textit{inverse KPCA (kernel PCA)}, for dimension reduction of high-dimensional data (i.e. images), feature extraction and variation source estimation. This algorithm is a generative method which has better interpretation than KPCA. Besides, this method is supposed to improve the performance of that dimension-reduction method.
+\sectionsep
+
+%\runsubsection{Cornell Phonetics Lab}
+%\descript{| Head Undergraduate Researcher}
+%\location{Mar 2012 ? May 2013 | Ithaca, NY}
+%Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2016  &Northwestern  & \href{https://www.mccormick.northwestern.edu/alumni/murphy-society-awards/}{Walter P. Murphy Fellowship}\\
+2016  &Northwestern   & \href{http://www.mccormick.northwestern.edu/industrial/phd-program/phd-admissions/funding-information.html}{Benjamin K. Sachs Graduate Fellowship} (\$ 7000)\\
+2015  &Duke Univ & Sam Y. Feng \& Rose S. Feng Fellowship (\$ 5000)\\
+2013  &Duke Univ & MEMS Research Supplement (\$ 5000)\\
+2012  &Duke Univ & The 1st Year MEMS Fellowship  \\
+2012  &Peking Univ & President Fund for Undergraduate Research Training \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Societies} 
+
+%\begin{tabular}{rll}
+%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+%2014   & National   & The Global Leadership and Education Forum (tGELF)\\
+%2012   &  National  & Golden Key International Honor Society\\
+%2012   &  National   & National Society of Collegiate Scholars\\
+%\end{tabular}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
